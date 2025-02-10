@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Carte Interactive - Dakar</h1>
+    <p>Ceci est  projet sur la ville de DAKAR</p>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([14.6928, -17.4467], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var marker = L.marker([14.6928, -17.4467]).addTo(map)
+            .bindPopup("Dakar, Sénégal")
+            .openPopup();
+    </script>
+    <br>
+    <a href="https://www.openstreetmap.org/#map=6/46.45/2.21">Open Street Map</a>
+</body>
+</html>
