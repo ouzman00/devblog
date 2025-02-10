@@ -6,16 +6,19 @@
     <title>Carte Interactive</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Carte Interactive - Dakar</h1>
-    <p>Ceci est  projet sur la ville de DAKAR</p>
+    <p>Ceci est un projet sur la ville de DAKAR</p>
+    
     <div id="map"></div>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         var map = L.map('map').setView([14.6928, -17.4467], 12);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
@@ -23,7 +26,17 @@
             .bindPopup("Dakar, Sénégal")
             .openPopup();
     </script>
-    <br>
-    <a href="https://www.openstreetmap.org/#map=6/46.45/2.21">Open Street Map</a>
+
+    
+    <hr><a href="https://www.openstreetmap.org/#map=6/46.45/2.21" target="_blank">Voir la carte sur Open Street Map</a>
+    
+    <!-- Section Contacts -->
+    <div id="contacts">
+        <h2>Contacts</h2>
+        <p><strong>Email:</strong> <a href="mailto:ouzman376@gmail.com">Envoyer un e-mail</a></p>
+        <p><strong>Téléphone: </strong> +33 7 53 55 26 98</p> <!-- Remplace ce numéro par ton vrai numéro -->
+        <p><strong>Adresse:</strong> Mbour, Sénégal</p>
+    </div>
+
 </body>
 </html>
